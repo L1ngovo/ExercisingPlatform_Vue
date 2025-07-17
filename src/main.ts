@@ -7,7 +7,7 @@ import ElementPlus from 'element-plus'
 import HeaderNavigation from './components/common/header-navigation.vue'
 
 import 'element-plus/dist/index.css'
-import './assets/main.css'
+import './assets/scss/main.css'
 
 const app = createApp(App)
 

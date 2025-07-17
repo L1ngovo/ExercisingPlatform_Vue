@@ -5,13 +5,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: () => import('../components/auth/login-page.vue'),
-    },
-    {
-        path: '/questions-list',
-        name: 'questions-list',
-        component: () => import('../components/common/questions-list-page.vue'),
+      name: 'main-page',
+      component: () => import('../components/pages/main-page.vue'),
     }
   ],
 })
