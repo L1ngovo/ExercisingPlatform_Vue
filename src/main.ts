@@ -8,6 +8,7 @@ import HeaderNavigation from './components/common/header-navigation.vue'
 
 import 'element-plus/dist/index.css'
 import './assets/scss/main.css'
+import 'remixicon/fonts/remixicon.css'
 
 const app = createApp(App)
 

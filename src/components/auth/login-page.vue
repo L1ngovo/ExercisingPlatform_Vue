@@ -1,14 +1,36 @@
 <!-- SlidePage.vue -->
 <template>
     <div class="login-page-container">
-        <div>logo</div>
-        <div class="login-page-form">
-            <input type="text" placeholder="用户名" />
-            <input type="password" placeholder="密码" />
-            <button>登录</button>
+        <div class="login-page-header">
+            <div>LOGO</div>
+            <div class="login-page-header-title">
+                <div @click="close">Home</div>
+                <div>Login</div>
+            </div>
         </div>
-        <!-- 关闭按钮 -->
-        <button @click="close">关闭</button>
+        <div class="login-page-body">
+            <div class="login-page-body-form">
+                <div class="login-page-body-input">
+                    <div>
+                        <i class="ri-user-5-line"></i>
+                    </div>
+                    <input type="text" placeholder="用户名" />
+                </div>
+                <div>
+                    <div>
+                        <i class="ri-lock-2-line"></i>
+                    </div>
+                    <input type="password" placeholder="密码" />
+                </div>
+                <div>
+                    <button>登录</button>
+                </div>
+            </div>
+        </div>
+        <div class="login-page-footer">
+            <p>Made by Hunter</p>
+            <p>Inspire by Shanghai</p>
+        </div>
     </div>
 </template>
 
@@ -24,7 +46,7 @@ const close = () => {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* 过渡效果的 CSS */
 .slide-down-enter-active,
 .slide-down-leave-active {
@@ -49,7 +71,6 @@ const close = () => {
     width: 100%;
     height: 100%;
     background: url('../../assets/images/login-bg.jpg') center/cover no-repeat;
-    padding: 20px;
     box-sizing: border-box;
     opacity: 0.9;
     display: flex;
@@ -57,10 +78,68 @@ const close = () => {
     justify-content: space-between;
 }
 
-.login-page-form {
+.login-page-header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+
+    & > :first-child {
+        font-size: 45px;
+        color: #fff;
+        flex: 6;
+    }
+    .login-page-header-title {
+        font-size: 32px;
+        color: #ccc;
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+
+        & > :first-child:hover {
+            color: blue;
+            cursor: pointer;
+        }
+        & > :last-child {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -10px;
+                width: 80%;
+                height: 5px;
+                background: #fff;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+.login-page-body {
+    flex-basis: 30%;
+}
+.login-page-body-form {
+    font-size: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    & > *:not(:last-child) {
+        height: 100%;
+        border-bottom: 2px solid #fff;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.login-page-footer {
+    height: 150px;
+    background-color: #1f405a;
+    opacity: 0.8;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
 }
 </style>

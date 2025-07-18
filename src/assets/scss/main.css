@@ -3,3 +3,23 @@ html,body,#app {
     padding: 0;
     height: 100%;
 }
+
+input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 10px;
+    /* border-bottom: 2px solid #ccc; */
+    /* display: block;
+    width: 30%;
+    margin-bottom: 20px;
+    font-size: .85em;
+    height: 40px;
+    transition: background-color 1s; */
+}
+
+/* input:active,
+input:focus {
+    background-color: #ffffff63;
+    border: none;
+} */
