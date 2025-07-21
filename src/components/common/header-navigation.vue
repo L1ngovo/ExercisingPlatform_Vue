@@ -16,6 +16,8 @@
     height: 60px;
     background-color: #614a4a;
     border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
 }
 .header-navigation-container {
     display: flex;
